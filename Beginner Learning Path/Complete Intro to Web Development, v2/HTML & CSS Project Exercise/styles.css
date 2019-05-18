@@ -34,7 +34,10 @@ body { padding: 10px; }
 	font-weight: normal;
 	font-size: 30px;
 	text-align: center;
+	margin: 15px 0;
 }
+
+.article-text { line-height: 1.2; }
 
 .article-img { width: 100%; }
 
