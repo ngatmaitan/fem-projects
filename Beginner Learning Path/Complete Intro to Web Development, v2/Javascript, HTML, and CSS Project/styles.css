@@ -39,6 +39,10 @@ body { margin: 0; }
 	background-color: #ebebeb;
 }
 
+.key:active {
+	background-color: #bbbcbe;
+}
+
 .key:first-child { margin-left: 0; }
 
 .key:last-child {
@@ -49,6 +53,10 @@ body { margin: 0; }
 
 .key:last-child:hover {
 	background-color: #dfb07e;
+}
+
+.key:last-child:active {
+	background-color: #dd8d37;
 }
 
 .double { width: 49.7%; }
