@@ -2,6 +2,8 @@
 	box-sizing: border-box;
 }
 
+body { margin: 0; }
+
 .calc {
 	width: 400px;
 	background: black;
@@ -20,12 +22,14 @@
 	justify-content: space-between;
 }
 
+.keyrow:last-child .key { margin-bottom: 0; }
+
 .key {
 	width: 24.5%;
-	font-size: 30px;
+	font-size: 40px;
 	flex-grow: 1;
 	margin: 0.25%;
-	padding: 20px;
+	height: 100px;
 	background-color: #d8d9db;
 	border: none;
 }
@@ -35,9 +39,12 @@
 	background-color: #ebebeb;
 }
 
+.key:first-child { margin-left: 0; }
+
 .key:last-child {
     background-color: #df974c;
     color: white;
+    margin-right: 0;
 }
 
 .key:last-child:hover {
