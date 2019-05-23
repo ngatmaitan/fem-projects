@@ -1,0 +1,49 @@
+* {
+	box-sizing: border-box;
+}
+
+.calc {
+	width: 400px;
+	background: black;
+	color: white;
+}
+
+.result-screen {
+	font-family: "Courier New", Courier, monospace;
+	text-align: right;
+	font-size: 40px;
+	padding: 20px 5px;
+}
+
+.keyrow {
+	display: flex;
+	justify-content: space-between;
+}
+
+.key {
+	width: 24.5%;
+	font-size: 30px;
+	flex-grow: 1;
+	margin: 0.25%;
+	padding: 20px;
+	background-color: #d8d9db;
+	border: none;
+}
+
+.key:hover {
+	cursor: pointer;
+	background-color: #ebebeb;
+}
+
+.key:last-child {
+    background-color: #df974c;
+    color: white;
+}
+
+.key:last-child:hover {
+	background-color: #dfb07e;
+}
+
+.double { width: 49.7%; }
+
+.triple { width: 74.8%; }
