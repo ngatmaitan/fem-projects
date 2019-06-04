@@ -1,36 +1,36 @@
 let input;
-let inputDisplay = 0;
-let inputHold;
+let num1 = 0;
+let num2;
 let symbol;
+let resultDisplay = document.getElementsByClassName('result-screen');
 
 function displayText() {
-	let el = document.getElementsByClassName('result-screen');
-	for (let i = 0; i < el.length; i++) {
-		el[i].innerText = inputDisplay;
+	for (let i = 0; i < resultDisplay.length; i++) {
+		resultDisplay[i].innerText = num1;
 	}
 }
 
 function deleteLastInput() {
-	if (inputDisplay.length === 1) {
-		inputDisplay = 0;
+	if (num1.length === 1) {
+		num1 = 0;
 	} else {
-		inputDisplay = inputDisplay.substr(0, inputDisplay.length-1);
+		num1 = num1.substr(0, num1.length-1);
 	}
 }
 
 function calculate(){
 	switch(symbol) {
 		case "÷":
-			inputDisplay = inputHold/parseInt(inputDisplay);
+			num1 = num2/parseInt(num1);
 			break;
 		case "×":
-			inputDisplay = inputHold*parseInt(inputDisplay);
+			num1 = num2*parseInt(num1);
 			break;
 		case "-":
-			inputDisplay = inputHold-parseInt(inputDisplay);
+			num1 = num2-parseInt(num1);
 			break;
 		case "+":
-			inputDisplay = inputHold+parseInt(inputDisplay);
+			num1 = num2+parseInt(num1);
 			break;
 	}
 }
@@ -38,9 +38,8 @@ function calculate(){
 function checkOperationSymbol(symbolInput) {
 	switch(symbolInput) {
 		case "C":
-			inputDisplay = 0;
-			input = undefined;
-			inputHold = undefined;
+			num1 = 0;
+			num2 = undefined;
 			symbol = undefined;
 			return false;
 			break;
@@ -75,18 +74,26 @@ function checkOperationSymbol(symbolInput) {
 document.querySelector('.key-container').addEventListener("click", function(event) {
 	if (event.target.tagName === "BUTTON") {
 		input = event.target.innerText;
+
+		/*  Check to see if input is a number
+		 *  if first number inputed, display on screen and assign to num1
+		 *  else concatenate input to num1
+		 *
+		 *  if input is a symbol, check if input is an operation (checkOperationSymbol())
+		 *  else either reset everything, deleteLastInput, or calculate
+		 */
 		if (!isNaN(input)) {
-			if (inputDisplay === 0) {
-				inputDisplay = input;
+			if (num1 === 0) {
+				num1 = input;
 				displayText();
 			} else {
-				inputDisplay = `${inputDisplay}${input}`;
+				num1 = `${num1}${input}`;
 				displayText();
 			}
 		} else {
 			if (checkOperationSymbol(input)) {
-				inputHold = parseInt(inputDisplay);
-				inputDisplay = 0;
+				num2 = parseInt(num1);
+				num1 = 0;
 				displayText();
 
 			} else {
