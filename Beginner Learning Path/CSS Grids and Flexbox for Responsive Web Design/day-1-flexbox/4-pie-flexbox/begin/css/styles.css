@@ -148,6 +148,10 @@ footer a {
   width: 96.66666%;
 }
 
+.row-content {
+  display: flex;
+  flex-flow: row wrap;
+}
 
 
 /* Small devices (tablets, 768px and up) */
@@ -195,7 +199,7 @@ aside[class*='sidebar'] {
   }
 
   [class*='col-'] {
-    float: left;
+    /* float: left; */
     margin-left: 3.33333%;
     min-height: 1px;
   }
