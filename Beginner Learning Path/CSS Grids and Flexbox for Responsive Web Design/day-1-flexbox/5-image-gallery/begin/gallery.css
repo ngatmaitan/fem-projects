@@ -13,8 +13,23 @@ ul {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
+	display: flex;
+	flex-flow: row wrap;
+}
+li {
+	margin-right: 4%;
+	flex: 0 0 92%;
+}
+img {
+	width: 100%;
 }
 @media (min-width: 550px) {
+	li {
+		flex: 0 0 44%;
+	}
 }
 @media (min-width: 850px) { 
+	li {
+		flex: 0 0 29%;
+	}
 }
