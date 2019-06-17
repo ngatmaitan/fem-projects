@@ -72,6 +72,20 @@ div.row {
   float: right;
   margin: 0 0 1em 1em;
 }
+ul.gallery {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+}
+.gallery li {
+  flex: 0 0 100%;
+}
+.gallery img { 
+  width: 100%; 
+  max-width: 300px;
+}
 [class*='sidebar'] {
   border: 1px solid #00c4c7;
   border-radius: 10px;
