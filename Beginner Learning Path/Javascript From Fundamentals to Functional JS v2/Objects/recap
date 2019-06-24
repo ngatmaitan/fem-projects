@@ -1,0 +1,36 @@
+What is an object?
+A: Almost 'everything' is an object.  boolean/numbers/strings can be objects if defined with the new keyword.  dates/maths/regular expressions/arrays/functions/objects are always objects.
+
+What is the difference between dot and bracket notation?
+A: Dot notation is much easier to read and can access properties on an object by specifiying the name of the object.
+	eg: let sound = obj.cat;
+   Bracket notation can access properties on an object by specifying the name of the object followed by the property name in brackets.  You can also not as limited in your property identifiers with bracket notation.
+   	eg: let sound = obj['cat'];
+
+How do you add a property with a key that contains special characters?
+A: With brackets.
+	eg: box['^&*'] = "testing 123";
+
+How do you add a property whose key and value are stored in different variables?
+A: eg game.name[0][0];
+
+How do we loop through objects to access the value?
+A: With a foor loop:
+	eg: for (var key in obj) {
+ 			console.log(obj[key])
+	    }
+
+When can you only use dot notation and not bracket?
+A: With strings.
+
+What can you only use bracket notation and not dot?
+A: With strings, numbers, variables, weird characters, expressions
+
+How do you add a property with a key that is stored in a variable?
+A: eg game.name[0] = 'Miss Scarlet';
+
+How do you access an object that is inside another object?
+A: eg user.personalInfo.name;
+
+How do you create an object that is nested inside another object?
+A: eg defaultsettings["uisettings"]["somekey"] = "some value";
